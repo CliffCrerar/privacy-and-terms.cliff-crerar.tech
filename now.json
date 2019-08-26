@@ -1,6 +1,6 @@
 {
     "name": "portal-blog-privacy-policies",
-    "alias": ["policies.cliff-crerar.tech", "blog.cliff-crerar.tech"],
+    "alias": ["policies.cliff-crerar.tech"],
     "version": 2,
     "builds": [{
             "src": "./portal-privacy/*.html",
