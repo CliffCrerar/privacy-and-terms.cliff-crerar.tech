@@ -1,0 +1,21 @@
+{
+    "name": "blog-privacy-policies",
+    "alias": ["policies.cliff-crerar.tech", "blog.cliff-crerar.tech"],
+    "version": 2,
+    "builds": [{
+            "src": "./portal-privacy/*.html",
+            "use": "@now/static"
+        }, {
+            "src": "./portal-terms/*.html",
+            "use": "@now/static"
+        },
+        {
+            "src": "./blog-privacy/*.html",
+            "use": "@now/static"
+        }
+    ],
+    "routes": [{
+        "src": "/privacy",
+        "dest": "./blog-privacy"
+    }]
+}
