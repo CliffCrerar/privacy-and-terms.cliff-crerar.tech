@@ -16,6 +16,6 @@
     ],
     "routes": [{
         "src": "/privacy",
-        "dest": "./blog-privacy"
+        "dest": "./blog-privacy/index.html"
     }]
 }
