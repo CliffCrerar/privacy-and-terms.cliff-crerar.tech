@@ -33,12 +33,6 @@
     "lint": "eslint src/**/*.ts  src/**/*.tsx",
     "prettify": "prettier src/**/.ts|x$ --write"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -61,21 +55,5 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
     "prettier": "^2.1.1"
-  },
-  "description": "An Ionic project",
-  "prettier": {
-    "printWidth": 120,
-    "bracketSpacing": true,
-    "trailingComma": "es5",
-    "semi": false,
-    "singleQuote": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "npm run lint:fix"
   }
 }
