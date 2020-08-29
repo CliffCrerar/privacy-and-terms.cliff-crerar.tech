@@ -1,0 +1,19 @@
+{
+  "name": "cliff-crerar.tech-privacy-terms",
+  "version": "1.0.0",
+  "description": "This directory is a brief example of a vanilla site that can be deployed to ZEIT Now with zero configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CliffCrerar/privacy-and-terms.cliff-crerar.tech.git"
+  },
+  "author": "Cliff Crerar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CliffCrerar/privacy-and-terms.cliff-crerar.tech/issues"
+  },
+  "homepage": "https://github.com/CliffCrerar/privacy-and-terms.cliff-crerar.tech#readme"
+}

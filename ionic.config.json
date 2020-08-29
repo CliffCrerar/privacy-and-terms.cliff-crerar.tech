@@ -1,0 +1,7 @@
+{
+  "name": "privacy-policies",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
