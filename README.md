@@ -8,6 +8,12 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier prettier
 Add the following configs to `package.json`
 
 ```
+"eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
+  },
 "prettier": {
     "printWidth": 90,
     "bracketSpacing": true,
@@ -38,3 +44,7 @@ add to package.json
     "*.js": "npm run lint:fix"
   },
 ```
+
+
+Resource:
+https://dev.to/eclecticcoding/linting-in-react-5c17
