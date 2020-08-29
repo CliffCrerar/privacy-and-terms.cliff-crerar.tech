@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 // import {MarkItDown} from '../mark-it-down'
 import {render} from "react-dom";
-import {IonIcon,IonLabel, IonItem, IonItemDivider, IonText, IonTitle} from '@ionic/react';
-import {flashOff, lockClosedOutline} from 'ionicons/icons'
+import {IonIcon, IonItem, IonLabel, IonText} from '@ionic/react';
+import {lockClosedOutline} from 'ionicons/icons'
 import MarkdownIt from 'markdown-it';
 // import error = Simulate.error;
 
@@ -83,7 +83,7 @@ export default function RenderMarkdown({markdownFile}: Props) {
         render(
             <IonItem>
                 {/*<IonTitle>*/}
-                <IonLabel style={{fontSize:'1.5em'}}>
+                <IonLabel style={{fontSize: '1.5em'}}>
                     {headingThird[0].innerText}
                 </IonLabel>
                 {/*</IonTitle>*/}
@@ -96,24 +96,24 @@ export default function RenderMarkdown({markdownFile}: Props) {
 
     function handleHeadingsOne() {
         render(
-            <IonItem style={{position:'relative',fontSize: '1.5em', }} className="ion-margin-vertical">
+            <IonItem style={{position: 'relative', fontSize: '1.5em',}} className="ion-margin-vertical">
                 <IonIcon slot="start" size="large" icon={lockClosedOutline}></IonIcon>
                 <IonText>{headingEl.innerText}</IonText>
             </IonItem>, headingEl
         )
     }
 
-    function handleHeadingsTwo(){
+    function handleHeadingsTwo() {
         headingSec.forEach((el: any) => {
             console.log(el);
             render(<IonItem style={{fontSize: '1.2em'}}>{el.innerText}</IonItem>, el);
         })
     }
 
-    function handleHeadingsThree(){
-        console.log('h3',headingThird);
+    function handleHeadingsThree() {
+        console.log('h3', headingThird);
 
-        for (let i = 1; i < headingThird.length; i++){
+        for (let i = 1; i < headingThird.length; i++) {
 
         }
     }

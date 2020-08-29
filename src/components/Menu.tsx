@@ -51,7 +51,7 @@ const Menu: React.FC = () => {
 
           {appPages.map((appPage, index) => {
             return (
-              <Fragment>
+
                 <IonMenuToggle key={index} autoHide={false}>
                   <IonItem
                     className={location.pathname === appPage.url ? 'selected' : ''}
@@ -64,7 +64,8 @@ const Menu: React.FC = () => {
                     <IonLabel>{appPage.title}</IonLabel>
                   </IonItem>
                 </IonMenuToggle>
-              </Fragment>
+
+
             )
           })}
         </IonList>
