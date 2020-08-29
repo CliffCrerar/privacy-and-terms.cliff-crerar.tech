@@ -33,7 +33,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,7 +51,19 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.0"
+    "@capacitor/cli": "2.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "prettier": {
+    "printWidth": 120,
+    "bracketSpacing": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true
+  }
 }
