@@ -1,9 +1,18 @@
-import React from 'react';
 import { expect } from 'chai';
-import TermsOfUse from './terms-of-use';
+
+
 
 describe('terms-of-use', function TermsOfUseSpec () {
     it('it exists', () => {
-        expect(TermsOfUse).to.be.ok;
+        fetch('./terms-of-use.md').then(response => {
+            response.text().then(body=> {
+                expect(body).to.be.ok;
+            }).catch(resError=>{
+                expect(resError).throw
+            })
+        }).catch(error=>{
+            expect(error).throw
+        })
+       
     });
 });

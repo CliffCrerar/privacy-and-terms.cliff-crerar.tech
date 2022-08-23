@@ -19,9 +19,12 @@ type PageProps = {
   pageTitle: { title: string }
 }
 
-const Page: any = ({ pageTitle }: PageProps) => {
+const Page: React.FC<PageProps> = ({ pageTitle }: PageProps) => {
   const { name } = useParams<{ name: string }>()
-
+  console.log(name);
+  
+  console.log(pageTitle);
+  
   return (
     <IonPage>
       <IonHeader>
@@ -41,7 +44,7 @@ const Page: any = ({ pageTitle }: PageProps) => {
         <IonHeader collapse="condense">
           <IonToolbar>{/*<IonTitle size="large">{pageTitle}</IonTitle>*/}</IonToolbar>
         </IonHeader>
-        <ExplorerContainer name={name} />
+        <ExplorerContainer name={name as string} />
       </IonContent>
     </IonPage>
   )

@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createRoot} from 'react-dom/client';
 import App from './App';
 import './index.scss';
 // import * as serviceWorker from './serviceWorker';
-ReactDOM.render(<App />, document.getElementById('root'));
+
 const scr: HTMLScriptElement = document.createElement('script');
+const rootElement = document.getElementById('root') as HTMLElement;
+const root = createRoot(rootElement);
+
 
 scr.innerHTML = `
 (function(w, d, s, l, i) {
@@ -24,6 +28,8 @@ scr.innerHTML = `
 `
 
 process.env.NODE_ENV === 'production' && document.head.appendChild(scr);
+
+root.render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
