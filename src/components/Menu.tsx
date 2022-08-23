@@ -38,7 +38,7 @@ const appPages: AppPage[] = [
   },
 ]
 
-const Menu: React.FC = () => {
+export const Menu: React.FC = () => {
   const location = useLocation()
 
   return (
@@ -89,4 +89,3 @@ const Menu: React.FC = () => {
   )
 }
 
-export default Menu

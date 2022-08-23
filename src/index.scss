@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Economica&family=Lato&display=swap');
 
+html, body {
+  min-height: 100vh !important; 
+}
+
 blockquote{
   background: var(--ion-color-light);
   border-left: 2px solid grey;

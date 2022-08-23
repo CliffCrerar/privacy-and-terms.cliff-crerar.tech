@@ -18,7 +18,7 @@ export default function RenderMarkdown({markdownFile}: Props) {
     // const [route, changeRoute] = useState(markdownFile)
     // toggleFetched(false);
     // document.createNodeIterator()
-    const mdContainer: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null)
+    const mdContainer = useRef<any>()
 
     // const [route, updatedHttpCall] = useState('');
     // const mdContainer: MutableRefObject<HTMLElement> = useRef(document.getElementById('md-container'));
@@ -38,11 +38,12 @@ export default function RenderMarkdown({markdownFile}: Props) {
 
             fetch(`/${markdownFile}.md`).then(response => response.text().then(body => {
                 responseBody = body;
+                console.log(body);
+                mdContainer.current.innerHTML = body
             })).catch(httpError => console.error(httpError.message))
                 .finally(() => {
                     Promise.resolve(markItDown.render(responseBody)).then(returnVal => {
-                        const containerElement = mdContainer.current as HTMLHeadingElement;
-                        containerElement.innerHTML = returnVal;
+                        mdContainer.current.innerHTML = returnVal;
                     })
                         .catch(renderError => console.error(renderError.message))
                 })
