@@ -37,6 +37,7 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {"scss-tokenizer":"0.4.3"},
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
